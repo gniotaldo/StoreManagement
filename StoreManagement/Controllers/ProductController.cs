@@ -14,7 +14,10 @@ namespace StoreManagement.Controllers
     public class ProductController : Controller
     {
         private StoreContext db = new StoreContext();
-
+        public ActionResult Archive()
+        {
+            return View(db.Products.ToList());
+        }
         // GET: Product
         public ActionResult Index()
         {

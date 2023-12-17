@@ -6,9 +6,6 @@
 
 <h2>List of all products</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -31,28 +28,28 @@
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Title)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Description)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CreationDate)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ImageUrl)
-    </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageUrl)
+            </td>
 
-    <td>
-        @Html.DisplayFor(modelItem => item.IsDeleted)
-    </td>
-</tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+        </tr>
     }
 
 </table>
 
 <p>
-    <a href="index.cshtml">Back</a>
+    @Html.ActionLink("Products", "Index", "Product")
 </p>
